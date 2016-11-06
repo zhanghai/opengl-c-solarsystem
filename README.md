@@ -1,6 +1,6 @@
 # Solar System
 
-This is an animated solar system model implemented with OpenGL and freeglut in C.
+This is an animated solar system model implemented with OpenGL and FreeGLUT in C.
 
 ## Screenshot
 
