@@ -50,4 +50,6 @@ Lighting is implemented with `glLightfv()`, a point light source positioned at t
 
 Astronomical data are taken from the planet pages on [Wikipedia](https://en.wikipedia.org). In order to keep the size and offset of this model reasonable, values are scaled by functions to present a sensible rendering, while maintaining their relative magnitude.
 
+You can get an impression of the actual scale of solar system at [If the Moon Were Only 1 Pixel](http://joshworth.com/dev/pixelspace/pixelspace_solarsystem.html).
+
 Both physical and orbital data of every planet is kept as a `body_t`, with a null-terminated `body_t *` array field containing its children. They are initialized as globals in beginning of the program.
