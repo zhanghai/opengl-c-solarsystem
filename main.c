@@ -128,30 +128,6 @@ GLdouble g_up[3] = { 0, 1, 0 };
 const GLdouble MOVE_FACTOR = 1;
 const GLdouble ZOOM_FACTOR = 2;
 
-/**
- * @param color AARRGGBB
- */
-void _glClearColorui(GLuint color) {
-    glClearColor((GLfloat) ((color >> 16) & 0xFF) / 0xFF,
-                 (GLfloat) ((color >> 8) & 0xFF) / 0xFF,
-                 (GLfloat) (color & 0xFF) / 0xFF,
-                 (GLfloat) ((color >> 24) & 0xFF) / 0xFF);
-}
-
-/**
- * @param color AARRGGBB
- */
-void _glColorui(GLuint color) {
-    glColor4ub((GLubyte) (color >> 16),
-               (GLubyte) (color >> 8),
-               (GLubyte) color,
-               (GLubyte) (color >> 24));
-}
-
-GLdouble _glutGetWindowAspect() {
-    return (GLdouble) glutGet(GLUT_WINDOW_WIDTH) / glutGet(GLUT_WINDOW_HEIGHT);
-}
-
 GLdouble vector_length(GLdouble vector[3]) {
     return sqrt(vector[0] * vector[0] + vector[1] * vector[1]
                 + vector[2] * vector[2]);
@@ -252,6 +228,30 @@ void multiply_matrix(GLdouble matrix[16], GLdouble term[16]) {
     matrix[13] = a30 * term[1] + a31 * term[5] + a32 * term[9] + a33 * term[13];
     matrix[14] = a30 * term[2] + a31 * term[6] + a32 * term[10] + a33 * term[14];
     matrix[15] = a30 * term[3] + a31 * term[7] + a32 * term[11] + a33 * term[15];
+}
+
+/**
+ * @param color AARRGGBB
+ */
+void _glClearColorui(GLuint color) {
+    glClearColor((GLfloat) ((color >> 16) & 0xFF) / 0xFF,
+                 (GLfloat) ((color >> 8) & 0xFF) / 0xFF,
+                 (GLfloat) (color & 0xFF) / 0xFF,
+                 (GLfloat) ((color >> 24) & 0xFF) / 0xFF);
+}
+
+/**
+ * @param color AARRGGBB
+ */
+void _glColorui(GLuint color) {
+    glColor4ub((GLubyte) (color >> 16),
+               (GLubyte) (color >> 8),
+               (GLubyte) color,
+               (GLubyte) (color >> 24));
+}
+
+GLdouble _glutGetWindowAspect() {
+    return (GLdouble) glutGet(GLUT_WINDOW_WIDTH) / glutGet(GLUT_WINDOW_HEIGHT);
 }
 
 void check_gl_error() {
