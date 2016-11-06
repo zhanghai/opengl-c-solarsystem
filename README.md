@@ -18,21 +18,21 @@ This is an animated solar system model implemented with OpenGL and freeglut in C
 ## Usage
 
 - Preset views:
-    - 1/2: Far / near top-down view.
-    - 3/4: Far / near perspective view.
-    - 5/6: Far / near view at ecliptic.
-    - 7/8: Far / near perspective view on x-axis.
+    - `1`/`2`: Far / near top-down view.
+    - `3`/`4`: Far / near perspective view.
+    - `5`/`6`: Far / near view at ecliptic.
+    - `7`/`8`: Far / near perspective view on x-axis.
 - Viewport:
-    - W/S: Forward / backward.
-    - A/D: Left / right.
-    - Q/E: Up / down.
+    - `W`/`S`: Forward / backward.
+    - `A`/`D`: Left / right.
+    - `Q`/`E`: Up / down.
     - Mouse wheel: Forward / backward.
     - Mouse dragging: Move scene around camera.
 - Rotation:
-    - -/(+/=): Time forward / backward.
-    - [/]: Speed up / down. This also has an influence on current time.
+    - `-`/(`+`/`=`): Time forward / backward.
+    - `[`/`]`: Speed up / down. This also has an influence on current time.
 - Debugging:
-    - P: Print viewport vectors.
+    - `P`: Print viewport vectors.
 
 ## Texture
 
