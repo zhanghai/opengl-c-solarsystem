@@ -2,6 +2,8 @@
 
 This is an animated solar system model implemented with OpenGL and freeglut in C.
 
+## Screenshot
+
 ![Screenshot](screenshot/solar_system.jpg)
 
 ## Features
@@ -10,7 +12,7 @@ This is an animated solar system model implemented with OpenGL and freeglut in C
 - Lighting.
 - Camera moving.
 - Sun, eight planets and moon.
-- Axis tilt and orbit inclination.
+- Axis tilt and orbit inclination (Visualizing the formation of midnight sun).
 - Astronomical data from Wikipedia.
 
 ## Usage
