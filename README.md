@@ -52,4 +52,4 @@ Astronomical data are taken from the planet pages on [Wikipedia](https://en.wiki
 
 You can get an impression of the actual scale of solar system at [If the Moon Were Only 1 Pixel](http://joshworth.com/dev/pixelspace/pixelspace_solarsystem.html).
 
-Both physical and orbital data of every planet is kept as a `body_t`, with a null-terminated `body_t *` array field containing its children. They are initialized as globals in beginning of the program.
+Both physical and orbital data of every planet is kept as a `body_t`, with a null-terminated `body_t *` array field containing its children. They are initialized as globals at the beginning of the program.
