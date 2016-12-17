@@ -22,13 +22,13 @@ bool load_tga(const char *path, texture_t *texture) {
     }
 
     GLubyte type_header[8];
-    if (fread(&type_header, 1, sizeof(type_header), file) != sizeof(type_header)) {
+    if (fread(type_header, 1, sizeof(type_header), file) != sizeof(type_header)) {
         perror("fread: TGA header type specification");
         fclose(file);
         return false;
     }
 
-    if (memcmp(TGA_TYPE_HEADER, &type_header, sizeof(type_header)) != 0) {
+    if (memcmp(TGA_TYPE_HEADER, type_header, sizeof(type_header)) != 0) {
         fprintf(stderr, "load_tga: Unsupported TGA type:");
         for (size_t i = 0; i < sizeof(type_header) / sizeof(type_header[0]); ++i) {
             fprintf(stderr, " %02X", type_header[i]);
@@ -45,8 +45,8 @@ bool load_tga(const char *path, texture_t *texture) {
         return false;
     }
 
-    texture->width = image_header[5] * 256 + image_header[4];
-    texture->height = image_header[7] * 256 + image_header[6];
+    texture->width = image_header[5] * 256u + image_header[4];
+    texture->height = image_header[7] * 256u + image_header[6];
 
     if ((texture->width <= 0) || (texture->height <= 0)) {
         fprintf(stderr, "load_tga: Invalid image size\n");
@@ -68,7 +68,7 @@ bool load_tga(const char *path, texture_t *texture) {
             return false;
     }
 
-    size_t pixel_size = depth / 8;
+    size_t pixel_size = depth / 8u;
     size_t data_size = texture->width * texture->height * pixel_size;
     texture->data  = malloc(data_size);
     if (!texture->data) {
