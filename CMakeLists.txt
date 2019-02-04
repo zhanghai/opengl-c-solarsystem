@@ -14,5 +14,6 @@ link_directories(${GLUT_LIBRARY_DIRS})
 add_definitions(${GLUT_DEFINITIONS})
 
 set(SOURCE_FILES main.c tga.c)
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR})
 add_executable(solar_system ${SOURCE_FILES})
 target_link_libraries(solar_system m ${OPENGL_LIBRARIES} ${GLUT_LIBRARY})
