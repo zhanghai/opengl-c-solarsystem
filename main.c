@@ -22,7 +22,7 @@
 const GLdouble ORBIT_RADIUS_FACTOR = 10;
 const GLdouble BODY_ROTATION_FACTOR = 20;
 GLdouble g_body_rotation_speed = 1;
-const GLdouble BODY_ROTATION_SPEED_FACTOR = 1;
+const GLdouble BODY_ROTATION_SPEED_FACTOR =0.125;
 GLdouble g_body_rotation_phase = 0;
 const GLdouble BODY_ROTATION_PHASE_FACTOR = 0.1;
 
