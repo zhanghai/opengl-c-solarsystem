@@ -74,8 +74,8 @@ body_t BODY_JUPITER = { MAKE_TEXTURE_PATH("jupiter"), 0, 10.97, 0, 3.13,
 body_t BODY_SATURN = { MAKE_TEXTURE_PATH("saturn"), 0, 9.140, 0, 26.73,
                        {}, 10.55 / 24., { 2.485240, 9.554909, 0, 10759.22 },
                        { NULL } };
-body_t BODY_URANUS = { MAKE_TEXTURE_PATH("uranus"), 0, 3.981, 0, 0.71833, {},
-                       97.77, { 0.773, 19.2184, 0, 30688.5 }, { NULL } };
+body_t BODY_URANUS = { MAKE_TEXTURE_PATH("uranus"), 0, 3.981, 0, 97.77, {},
+                       /*- not need minus for tilt is already > 90 deg*/0.71833, { 0.773, 19.2184, 0, 30688.5 }, { NULL } };
 body_t BODY_NEPTUNE = { MAKE_TEXTURE_PATH("neptune"), 0, 3.865, 0, 0.6713, {},
                         28.32, { 1.767975, 30.110387, 0, 60182 }, { NULL } };
 body_t BODY_SUN = { MAKE_TEXTURE_PATH("sun"), 0, 109 * SUN_RADIUS_SCALE, 0,
