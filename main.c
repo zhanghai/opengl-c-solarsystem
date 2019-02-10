@@ -67,12 +67,12 @@ body_t BODY_MOON = { MAKE_TEXTURE_PATH("moon"), 0, 0.273, 0, 27.321661, {},
 body_t BODY_EARTH = { MAKE_TEXTURE_PATH("earth"), 0, 1, 0, 23.4392811, {},
                       0.99726968, { 0.00005, 1, 0, 365.256363004 },
                       { &BODY_MOON, NULL } };
-body_t BODY_MARS = { MAKE_TEXTURE_PATH("mars"), 0, 0.5320, 0, 1.025957, {},
-                     25.19, { 1.850, 1.523679, 0, 686.971 }, { NULL } };
-body_t BODY_JUPITER = { MAKE_TEXTURE_PATH("jupiter"), 0, 10.97, 0, 9.925 / 24.,
-                        {}, 3.13, { 1.303, 5.20260, 0, 4332.59 }, { NULL } };
-body_t BODY_SATURN = { MAKE_TEXTURE_PATH("saturn"), 0, 9.140, 0, 10.55 / 24.,
-                       {}, 26.73, { 2.485240, 9.554909, 0, 10759.22 },
+body_t BODY_MARS = { MAKE_TEXTURE_PATH("mars"), 0, 0.5320, 0, 25.19, {},
+                     1.025957, { 1.850, 1.523679, 0, 686.971 }, { NULL } };
+body_t BODY_JUPITER = { MAKE_TEXTURE_PATH("jupiter"), 0, 10.97, 0, 3.13,
+                        {}, 9.925 / 24., { 1.303, 5.20260, 0, 4332.59 }, { NULL } };
+body_t BODY_SATURN = { MAKE_TEXTURE_PATH("saturn"), 0, 9.140, 0, 26.73,
+                       {}, 10.55 / 24., { 2.485240, 9.554909, 0, 10759.22 },
                        { NULL } };
 body_t BODY_URANUS = { MAKE_TEXTURE_PATH("uranus"), 0, 3.981, 0, 0.71833, {},
                        97.77, { 0.773, 19.2184, 0, 30688.5 }, { NULL } };
